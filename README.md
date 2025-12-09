@@ -63,4 +63,4 @@
 - Pretty Boy Swag - Soulja Boy
 - Glamorous - Fergie, Ludacris
 
-*Video:* https://www.canva.com/design/DAG6_RxYVIM/zxau6dfxn5R8_SAo78WRgA/watch?utm_content=DAG6_RxYVIM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h87f919a719
+*Video:* https://youtube.com/shorts/CjulFEVCVYY?feature=share
