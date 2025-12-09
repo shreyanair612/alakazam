@@ -47,3 +47,18 @@
 9. **View the result**  
    - After the run finishes, the page updates to show the latest detected song and its score.
 
+*Songs currently included in our database to test:*
+- Uptown Funk - Mark Ronson, Bruno Mars
+- undressed - sombr
+- Busy Woman - Sabrina Carpenter
+- Fame is a Gun - Addison Rae
+- Bed Chem - Sabrina Carpenter
+- Breaking Dishes - Rihanna
+- Sunflower - Post Malone, Swae Lee
+- Dark Thoughts - Lil Tecca 
+- Illegal - PinkPantheress
+- Pink + White - Frank Ocean
+- Promiscuous - Nelly Furtado, Timbaland
+- Kiss Me Thru The Phone - Soulja Boy, Sammie
+- Pretty Boy Swag - Soulja Boy
+- Glamorous - Fergie, Ludacris
