@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EE250 Audio Project Control</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #111; color: #eee; padding: 20px; }
+    button { margin: 8px 0; padding: 10px 18px; border-radius: 4px; border: none; cursor: pointer; }
+    .start { background: #4caf50; color: #fff; }
+    #song-box { margin-top: 20px; padding: 14px; background: #222; border-radius: 6px; }
+    #song-title { font-weight: bold; color: #ffeb3b; margin-bottom: 8px; }
+    pre { background: #000; padding: 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>EE250 Audio Project</h1>
+  <p>click to listen for 10 seconds and detect the song.</p>
+
+  <button class="start" onclick="startListening()">
+    start listening 🎧
+  </button>
+
+  <div id="song-box">
+    <div id="song-title">detected song: (none)</div>
+    <pre id="result-raw">no output yet.</pre>
+  </div>
+
+  <script>
+    async function startListening() {
+      document.getElementById("song-title").textContent = "listening...";
+      document.getElementById("result-raw").textContent = "";
+
+      try {
+        await fetch("http://127.0.0.1:5000/run", { method: "POST" });
+
+        setTimeout(fetchResult, 11000); // wait longer than 10s
+      } catch (err) {
+        document.getElementById("song-title").textContent = "error starting listener";
+      }
+    }
+
+    async function fetchResult() {
+      try {
+        const res = await fetch("http://127.0.0.1:5000/last_result");
+        const data = await res.json();
+
+        const song = data.song || "(no match)";
+        const score = data.score != null ? ` (score: ${data.score})` : "";
+
+        document.getElementById("song-title").textContent =
+          "detected song: " + song + score;
+
+        document.getElementById("result-raw").textContent =
+          data.raw || "no raw output.";
+      } catch (err) {
+        document.getElementById("song-title").textContent = "error fetching result";
+      }
+    }
+  </script>
+</body>
+</html>
