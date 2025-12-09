@@ -1,4 +1,4 @@
-# EE250 Final Project: Distributed Audio Fingerprinting & Recognition
+# EE250 Final Project: ALAKAZAM
 
 ## Team Member Names
 - Shreya Nair  
