@@ -10,7 +10,6 @@
 
 1. **Install dependencies** (on both laptop and Raspberry Pi as needed):
 ```pip install sounddevice numpy scipy paho-mqtt flask flask-cors```
-(Install `pyaudio` as well if any capture script uses it.)
 
 2. **Start an MQTT broker** (e.g., Mosquitto) on your network.  
 	- Note the broker’s IP address.
